@@ -5,8 +5,9 @@ services:
     image: "nginx:latest"
     ports:
       - "8080:80"
-#    volumes:
-#      - .:/code
+    volumes:
+      - ./files/nginx.conf:/etc/nginx/nginx.conf
+      - ./files/ssl:/etc/nginx/ssl
 #  redis:
 #    image: "redis:alpine"
 
